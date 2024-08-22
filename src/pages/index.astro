@@ -1,19 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import RiddleSection from '../sections/RiddleSection.astro';
+import SoundController from '../components/SoundController.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="△ Dont Happy Birth Day WebSite">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<SoundController />
+		<RiddleSection />
 	</main>
 </Layout>
 
 <style>
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+	main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 </style>
+
