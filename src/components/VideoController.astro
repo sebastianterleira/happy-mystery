@@ -1,0 +1,25 @@
+<div id="videoContainer">
+  <video id="doritoVideo" src="videos/dorito.mp4"></video>
+</div>
+
+<style is:global>
+  /* Estilos adicionales para el video */
+  #videoContainer {
+    width: 25rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: none; /* Oculto por defecto */
+  }
+
+  #videoContainer #doritoVideo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+</style>
