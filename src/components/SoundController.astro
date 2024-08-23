@@ -213,7 +213,7 @@ z"
     // Cuando termine la segunda canción, reinicia la secuencia
     ominous.addEventListener("ended", function onTrack2Ended() {
       ominous.removeEventListener("ended", onTrack2Ended); // Remueve el event listener para evitar múltiples llamadas
-      tone.volume = 0.7;
+      tone.volume = 0.4;
       tone.play();
 
       tone.addEventListener("ended", function onTrack3Ended() {
