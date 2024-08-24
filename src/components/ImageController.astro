@@ -4,6 +4,7 @@ import Image from "astro/components/Image.astro";
 import Baby from "../assets/images/baby.jpeg";
 import Yoyo from "../assets/images/yoyo.jpg";
 import Resurrection from "../assets/images/resurrection.png";
+import NotApproved  from "../assets/images/notApproved.png";
 ---
 
 <div id="imageContainer">
@@ -20,9 +21,10 @@ import Resurrection from "../assets/images/resurrection.png";
       <Image src={Baby} width={400} height={390} alt="baby bill cipher" id="babyBillImage" loading="eager" class="imagen"/>
       <Image src={Yoyo} width={400} height={390} alt="yoyolafrenchie" id="yoyoImage" loading="eager" class="imagen"/>
       <Image src={Resurrection} width={510} height={410} alt="boleto para resurreción gratis" id="resurrectionImage" loading="eager" class="imagen"/>
+      <Image src={NotApproved} width={690} height={480} alt="NOT S&P APPROVED, WASH YOUR MOUNTh OUT WITH SOAP!" id="notApproved" loading="eager" class="notApproved"/>
     </div>
     <p id="text-image"></p>
-    <div class="close__container-bottom">
+    <div class="close__container-bottom" id="close__container-bottom">
       <button class="closeBtn closeBtn__styles-bottom">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-cancel icon__cancel_styles-bottom">
         <path d="M20 20L4 4m16 0L4 20" stroke="#fff"></path>
@@ -35,12 +37,14 @@ import Resurrection from "../assets/images/resurrection.png";
 
 <script>
   const closeBtns = document.getElementsByClassName('closeBtn');
+  const buttonCloseBottom = document.getElementById('close__container-bottom') as HTMLButtonElement;
   const imageContainer = document.getElementById('imageContainer') as HTMLDivElement;
   const contentUnrevealSound = document.getElementById('content-unreveal') as HTMLAudioElement;
-  const imagenes = document.querySelectorAll('img')
+  const imagenes = document.querySelectorAll('img');
 
   Array.from(closeBtns).forEach((closeBtn) => {
     (closeBtn as HTMLButtonElement).addEventListener('click', () => {
+      buttonCloseBottom.classList.remove("not-display");
       contentUnrevealSound.volume = 1;
       contentUnrevealSound.play();
       imageContainer.style.display = 'none';
@@ -57,6 +61,8 @@ import Resurrection from "../assets/images/resurrection.png";
     flex-direction: column;
     gap: 1rem;
     width: clamp(90%, 2vw, 40%);
+    width: 100%;
+    height: 100%;
   }
 
   .close__container {
@@ -142,6 +148,8 @@ import Resurrection from "../assets/images/resurrection.png";
   .Image {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 
   #text-image { 
@@ -155,9 +163,13 @@ import Resurrection from "../assets/images/resurrection.png";
     margin-left: auto;
     margin-right: auto;
     max-width: 490px;
+    padding: 0 0.5rem;
   }
 
-
+  .notApproved {
+    width: 100%;
+    max-width: 690px;
+  }
 </style>
 
 <style is:global>
@@ -181,13 +193,17 @@ import Resurrection from "../assets/images/resurrection.png";
     display: none; /* Oculto por defecto */
   }
 
-  #babyBillImage, #yoyoImage, #resurrectionImage{
+  #babyBillImage, #yoyoImage, #resurrectionImage, #notApproved{
     height: auto;
     display: none;
   }
 
   .visible {
     display: block !important;
+  }
+
+  .not-display {
+    display: none !important;
   }
 
   @media (max-width: 500px) {

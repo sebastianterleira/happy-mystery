@@ -175,6 +175,8 @@ import VideoController from "../components/VideoController.astro"
     const babyBillImage = document.getElementById('babyBillImage') as HTMLImageElement;
     const yoyoImage = document.getElementById('yoyoImage') as HTMLImageElement;
     const resurrectionImage = document.getElementById('resurrectionImage') as HTMLImageElement;
+    const notApproved = document.getElementById('notApproved') as HTMLImageElement;
+    const buttonCloseBottom = document.getElementById('close__container-bottom') as HTMLButtonElement;
 
     if (!codes[input]) {
       // Si el código es incorrecto
@@ -230,6 +232,14 @@ import VideoController from "../components/VideoController.astro"
         resurrectionImage.classList.add("visible")
         document.getElementById("result").innerText = '';
         document.getElementById("text-image").innerText = result;
+        contentRevealSound.volume = 1;
+        contentRevealSound.play();
+      } else if (input === "CUM" || "ASSHOLE") {
+        imageContainer.style.display = 'flex';
+        notApproved.classList.add("visible");
+        buttonCloseBottom.classList.add("not-display");
+        document.getElementById("result").innerText = '';
+        document.getElementById("text-image").innerText = "";
         contentRevealSound.volume = 1;
         contentRevealSound.play();
       } else {
