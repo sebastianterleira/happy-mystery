@@ -3,6 +3,7 @@ import Image from "astro/components/Image.astro";
 
 import Baby from "../assets/images/baby.jpeg";
 import Yoyo from "../assets/images/yoyo.jpg";
+import Resurrection from "../assets/images/resurrection.png";
 ---
 
 <div id="imageContainer">
@@ -18,6 +19,7 @@ import Yoyo from "../assets/images/yoyo.jpg";
     <div class="Image">
       <Image src={Baby} width={400} height={390} alt="baby bill cipher" id="babyBillImage" loading="eager" class="imagen"/>
       <Image src={Yoyo} width={400} height={390} alt="yoyolafrenchie" id="yoyoImage" loading="eager" class="imagen"/>
+      <Image src={Resurrection} width={510} height={410} alt="boleto para resurreción gratis" id="resurrectionImage" loading="eager" class="imagen"/>
     </div>
     <p id="text-image"></p>
     <div class="close__container-bottom">
@@ -179,7 +181,7 @@ import Yoyo from "../assets/images/yoyo.jpg";
     display: none; /* Oculto por defecto */
   }
 
-  #babyBillImage, #yoyoImage{
+  #babyBillImage, #yoyoImage, #resurrectionImage{
     height: auto;
     display: none;
   }
