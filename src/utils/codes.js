@@ -8,7 +8,7 @@ export const codes = {
   BILL: "Asi que quieres saber mas sobre mi...",
   BILLCIPHER: "Soy una idea perfectamente geometrica.",
   DORITO: "No debiste decirme eso.",
-  "MUERTE?": "¿Que es eso?",
+  MUERTE: "¿Que es eso?",
   ANSWER: "QUESTION",
   ASSHOLE: 'NOT S&P approved, wash your mouth out with soap!',
   CUM: "NOT S&P approved, wash your mouth out with soap!",
