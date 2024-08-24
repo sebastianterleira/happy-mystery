@@ -2,6 +2,7 @@
 import Image from "astro/components/Image.astro";
 
 import Baby from "../assets/images/baby.jpeg";
+import Yoyo from "../assets/images/yoyo.jpg";
 ---
 
 <div id="imageContainer">
@@ -16,6 +17,7 @@ import Baby from "../assets/images/baby.jpeg";
     </div>
     <div class="Image">
       <Image src={Baby} width={400} height={390} alt="baby bill cipher" id="babyBillImage" loading="eager" class="imagen"/>
+      <Image src={Yoyo} width={400} height={390} alt="yoyolafrenchie" id="yoyoImage" loading="eager" class="imagen"/>
     </div>
     <p id="text-image"></p>
     <div class="close__container-bottom">
@@ -33,12 +35,16 @@ import Baby from "../assets/images/baby.jpeg";
   const closeBtns = document.getElementsByClassName('closeBtn');
   const imageContainer = document.getElementById('imageContainer') as HTMLDivElement;
   const contentUnrevealSound = document.getElementById('content-unreveal') as HTMLAudioElement;
+  const imagenes = document.querySelectorAll('img')
 
   Array.from(closeBtns).forEach((closeBtn) => {
     (closeBtn as HTMLButtonElement).addEventListener('click', () => {
       contentUnrevealSound.volume = 1;
       contentUnrevealSound.play();
       imageContainer.style.display = 'none';
+      imagenes.forEach((imagen) => {
+        imagen.classList.remove('visible'); 
+      })
     });
   })
 </script>
@@ -173,9 +179,13 @@ import Baby from "../assets/images/baby.jpeg";
     display: none; /* Oculto por defecto */
   }
 
-  #imageContainer #babyBillImage {
+  #babyBillImage, #yoyoImage{
     height: auto;
     display: none;
+  }
+
+  .visible {
+    display: block !important;
   }
 
   @media (max-width: 500px) {

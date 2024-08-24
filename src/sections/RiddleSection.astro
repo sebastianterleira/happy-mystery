@@ -173,6 +173,7 @@ import VideoController from "../components/VideoController.astro"
     const imageContainer = document.getElementById('imageContainer');
     const contentRevealSound = document.getElementById('content-reveal') as HTMLAudioElement;
     const babyBillImage = document.getElementById('babyBillImage') as HTMLImageElement;
+    const yoyoImage = document.getElementById('yoyoImage') as HTMLImageElement;
 
     if (!codes[input]) {
       // Si el código es incorrecto
@@ -211,7 +212,14 @@ import VideoController from "../components/VideoController.astro"
         });
       } else if (input === "BABY") {
         imageContainer.style.display = 'flex';
-        babyBillImage.style.display = "block";
+        babyBillImage.classList.add("visible")
+        document.getElementById("result").innerText = '';
+        document.getElementById("text-image").innerText = result;
+        contentRevealSound.volume = 1;
+        contentRevealSound.play();
+      } else if (input === "YOYO") {
+        imageContainer.style.display = 'flex';
+        yoyoImage.classList.add("visible")
         document.getElementById("result").innerText = '';
         document.getElementById("text-image").innerText = result;
         contentRevealSound.volume = 1;
