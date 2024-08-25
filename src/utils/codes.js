@@ -12,11 +12,16 @@ export const codes = {
   ANSWER: "QUESTION",
   ASSHOLE: 'NOT S&P approved, wash your mouth out with soap!',
   CUM: "NOT S&P approved, wash your mouth out with soap!",
+  BITCH: "NOT S&P approved, wash your mouth out with soap!",
   AXOLOTL: "HACES MUCHAS PREGUNTAS...",
   BABY: "FELICIDADES, ADIVINA QUÉ ESTÁ CRECIENDO DENTRO DE TI AHORA MISMO. ¡NOS VEMOS EN 9 MESES, PAPÁ!",
+  BABYBILL: "FELICIDADES, ADIVINA QUÉ ESTÁ CRECIENDO DENTRO DE TI AHORA MISMO. ¡NOS VEMOS EN 9 MESES, PAPÁ!",
   HL1: "Stahppppppppppppppppp!",
   HL2: "Lamar!!, donde estas!?",
   HL3: "Bill tambien perdio la esperanza de algún día ver ese 3...",
   CRYPTOGRAMCODEX: "Bien!, recibe los cryptogramas codificados, dales un buen uso.",
+  BLENDIN: "Agente de tiempo perdido y presunto incompetente",
+  BLENDINBLANDIN: "Agente de tiempo perdido y presunto incompetente",
+  BLENDINBLENJAMINBLANDIN: "Agente de tiempo perdido y presunto incompetente",
   // Puedes agregar más códigos aquí.
 };

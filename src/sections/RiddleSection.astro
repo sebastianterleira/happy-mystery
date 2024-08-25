@@ -218,7 +218,7 @@ import VideoController from "../components/VideoController.astro"
           videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
           opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
         });
-      } else if (input === "BABY") {
+      } else if (input === "BABY" || input === "BABYBILL") {
         imageContainer.style.display = 'flex';
         babyBillImage.classList.add("visible")
         document.getElementById("result").innerText = '';
@@ -239,7 +239,7 @@ import VideoController from "../components/VideoController.astro"
         document.getElementById("text-image").innerText = result;
         contentRevealSound.volume = 1;
         contentRevealSound.play();
-      } else if (input === "CUM" || input === "ASSHOLE") {
+      } else if (input === "CUM" || input === "ASSHOLE" || input === "BITCH") {
         imageContainer.style.display = 'flex';
         notApproved.classList.add("visible");
         buttonCloseBottom.classList.add("not-display");
