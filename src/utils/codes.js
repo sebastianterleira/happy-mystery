@@ -14,7 +14,7 @@ export const codes = {
   CUM: "NOT S&P approved, wash your mouth out with soap!",
   AXOLOTL: "HACES MUCHAS PREGUNTAS...",
   BABY: "FELICIDADES, ADIVINA QUÉ ESTÁ CRECIENDO DENTRO DE TI AHORA MISMO. ¡NOS VEMOS EN 9 MESES, PAPÁ!",
-  HL1: "Cómo era?, Gordon que?",
+  HL1: "Stahppppppppppppppppp!",
   HL2: "Lamar!!, donde estas!?",
   HL3: "Bill tambien perdio la esperanza de algún día ver ese 3..."
   // Puedes agregar más códigos aquí.

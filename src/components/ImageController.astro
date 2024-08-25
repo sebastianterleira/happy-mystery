@@ -6,6 +6,8 @@ import Yoyo from "../assets/images/yoyo.jpg";
 import Resurrection from "../assets/images/resurrection.png";
 import NotApproved  from "../assets/images/notApproved.png";
 import Lamar from "../assets/images/lamar.jpg"
+import Scientist from "../assets/images/scientist.webp"
+import HL3 from "../assets/images/HL3.jpg"
 ---
 
 <div id="imageContainer">
@@ -24,6 +26,8 @@ import Lamar from "../assets/images/lamar.jpg"
       <Image src={Resurrection} width={510} height={410} alt="boleto para resurreción gratis" id="resurrectionImage" loading="eager" class="imagen"/>
       <Image src={NotApproved} width={690} height={480} alt="NOT S&P APPROVED, WASH YOUR MOUNTh OUT WITH SOAP!" id="notApproved" loading="eager" class="notApproved"/>
       <Image src={Lamar} width={400} height={390} alt="Es lamar, el headcrab mas importante!" id="lamarImage" loading="eager" class="imagen"/>
+      <Image src={Scientist} width={400} height={390} alt="Stahpppp!, Dargh!" id="scientistImage" loading="eager" class="imagen"/>
+      <Image src={HL3} width={450} height={400} alt="I want to believe" id="hl3Image" loading="eager" class="imagen"/>
     </div>
     <p id="text-image"></p>
     <div class="close__container-bottom" id="close__container-bottom">
@@ -195,7 +199,13 @@ import Lamar from "../assets/images/lamar.jpg"
     display: none; /* Oculto por defecto */
   }
 
-  #babyBillImage, #yoyoImage, #resurrectionImage, #notApproved, #lamarImage{
+  #babyBillImage,
+  #yoyoImage,
+  #resurrectionImage,
+  #notApproved,
+  #lamarImage,
+  #scientistImage, 
+  #hl3Image {
     height: auto;
     display: none;
   }

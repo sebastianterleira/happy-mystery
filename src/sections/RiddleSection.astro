@@ -6,6 +6,7 @@ import VideoController from "../components/VideoController.astro"
 <section class="riddle-section">
   <div class="opacity__container">
     <audio src="/sounds/error.mp3" id="error"></audio>
+    <audio src="/sounds/STAHP.mp3" id="stahpSound"></audio>
     <audio src="/sounds/content-reveal.mp3" id="content-reveal"></audio>
     <h1>△</h1>
   <div class="content__form">
@@ -178,6 +179,9 @@ import VideoController from "../components/VideoController.astro"
     const notApproved = document.getElementById('notApproved') as HTMLImageElement;
     const buttonCloseBottom = document.getElementById('close__container-bottom') as HTMLButtonElement;
     const lamarImage = document.getElementById("lamarImage") as HTMLImageElement;
+    const scientistImage = document.getElementById("scientistImage") as HTMLImageElement;
+    const stahpSound = document.getElementById('stahpSound') as HTMLAudioElement;
+    const hl3Image = document.getElementById("hl3Image") as HTMLImageElement;
 
     if (!codes[input]) {
       // Si el código es incorrecto
@@ -243,9 +247,25 @@ import VideoController from "../components/VideoController.astro"
         document.getElementById("text-image").innerText = "";
         contentRevealSound.volume = 1;
         contentRevealSound.play();
+      } else if (input === "HL1") {
+        imageContainer.style.display = 'flex';
+        scientistImage.classList.add("visible");
+        document.getElementById("result").innerText = '';
+        document.getElementById("text-image").innerText = result;
+        stahpSound.volume = .5;
+        stahpSound.play();
+        contentRevealSound.volume = 1;
+        contentRevealSound.play();
+      } else if (input === "HL3") {
+        imageContainer.style.display = 'flex';
+        hl3Image.classList.add("visible");
+        document.getElementById("result").innerText = '';
+        document.getElementById("text-image").innerText = result;
+        contentRevealSound.volume = 1;
+        contentRevealSound.play();
       } else if (input === "HL2") {
         imageContainer.style.display = 'flex';
-        lamarImage.classList.add("visible")
+        lamarImage.classList.add("visible");
         document.getElementById("result").innerText = '';
         document.getElementById("text-image").innerText = result;
         contentRevealSound.volume = 1;
