@@ -177,6 +177,7 @@ import VideoController from "../components/VideoController.astro"
     const resurrectionImage = document.getElementById('resurrectionImage') as HTMLImageElement;
     const notApproved = document.getElementById('notApproved') as HTMLImageElement;
     const buttonCloseBottom = document.getElementById('close__container-bottom') as HTMLButtonElement;
+    const lamarImage = document.getElementById("lamarImage") as HTMLImageElement;
 
     if (!codes[input]) {
       // Si el código es incorrecto
@@ -240,6 +241,13 @@ import VideoController from "../components/VideoController.astro"
         buttonCloseBottom.classList.add("not-display");
         document.getElementById("result").innerText = '';
         document.getElementById("text-image").innerText = "";
+        contentRevealSound.volume = 1;
+        contentRevealSound.play();
+      } else if (input === "HL2") {
+        imageContainer.style.display = 'flex';
+        lamarImage.classList.add("visible")
+        document.getElementById("result").innerText = '';
+        document.getElementById("text-image").innerText = result;
         contentRevealSound.volume = 1;
         contentRevealSound.play();
       } else {
