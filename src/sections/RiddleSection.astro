@@ -182,6 +182,7 @@ import VideoController from "../components/VideoController.astro"
     const scientistImage = document.getElementById("scientistImage") as HTMLImageElement;
     const stahpSound = document.getElementById('stahpSound') as HTMLAudioElement;
     const hl3Image = document.getElementById("hl3Image") as HTMLImageElement;
+    const sadleysBar = document.getElementById("sadleysBar") as HTMLImageElement;
 
     if (!codes[input]) {
       // Si el código es incorrecto
@@ -279,6 +280,18 @@ import VideoController from "../components/VideoController.astro"
         document.body.removeChild(downloadLink); // Elimina el enlace del DOM
         resetBlinkEffect(true);
         document.getElementById("result").innerText = result;
+      } else if (input === "BREAKUP") {
+        imageContainer.style.display = 'flex';
+        sadleysBar.classList.add("visible");
+        const downloadLink = document.createElement("a");
+        downloadLink.href = "/download/OSADLEYSLOGO.zip"; // Ruta del archivo
+        downloadLink.download = "OSADLEYSLOGO.zip"; // Nombre del archivo para descargar
+        document.body.appendChild(downloadLink); // Agregar al DOM
+        downloadLink.click(); // Simula un clic para iniciar la descarga
+        document.body.removeChild(downloadLink); // Elimina el enlace del DOM
+        resetBlinkEffect(true);
+        document.getElementById("result").innerText = "";
+        document.getElementById("text-image").innerText = result;
       } else {
         resetBlinkEffect(true);
         document.getElementById("result").innerText = result;
