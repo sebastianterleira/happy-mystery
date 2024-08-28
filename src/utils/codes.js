@@ -31,5 +31,7 @@ export const codes = {
   "DISPENSE MY TREAT": "wallpapers, 🦓✨",
   BYEGOLD: "BYE!",
   CARD: "DREAM DEMON",
+  CHIP: "No debiste decirme eso.",
+  CIA: "TU CAMARÁ WEB ESTA ENCENDIDA, ESTAMOS MIRANDO.",
   // Puedes agregar más códigos aquí.
 };
