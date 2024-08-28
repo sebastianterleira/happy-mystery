@@ -33,5 +33,7 @@ export const codes = {
   CARD: "DREAM DEMON",
   CHIP: "No debiste decirme eso.",
   CIA: "TU CAMARÁ WEB ESTA ENCENDIDA, ESTAMOS MIRANDO.",
+  CIPHERTOLOGY: "MANTÉN LA MENTE ABIERTA",
+  CLONE: "¡Ahora es tu problema! ¡Solo mantenlo alejado de líquidos!"
   // Puedes agregar más códigos aquí.
 };
