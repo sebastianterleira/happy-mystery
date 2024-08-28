@@ -26,5 +26,8 @@ export const codes = {
   LIFE: "LIFE: 72% COMPLETE, NOW LOADING: DEATH",
   BREAKUP: "O'Sadleys",
   BURNEDINSIDE: "🌲",
+  BURNSIDE: "BURNEDINSIDE",
+  BUTTERNUBBINS: "you've earned a treat! enter 'dispense my treat' to download",
+  "DISPENSE MY TREAT": "wallpapers, 🦓✨"
   // Puedes agregar más códigos aquí.
 };

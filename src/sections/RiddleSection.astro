@@ -307,6 +307,15 @@ import VideoController from "../components/VideoController.astro"
           videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
           opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
         });
+      } else if (input === "DISPENSE MY TREAT") {
+        const downloadLink = document.createElement("a");
+        downloadLink.href = "/download/BILLS FILES DO NOT OPEN!!.zip"; // Ruta del archivo
+        downloadLink.download = "BILLS FILES DO NOT OPEN!!.zip"; // Nombre del archivo para descargar
+        document.body.appendChild(downloadLink); // Agregar al DOM
+        downloadLink.click(); // Simula un clic para iniciar la descarga
+        document.body.removeChild(downloadLink); // Elimina el enlace del DOM
+        resetBlinkEffect(true);
+        document.getElementById("result").innerText = result;
       } else {
         resetBlinkEffect(true);
         document.getElementById("result").innerText = result;
