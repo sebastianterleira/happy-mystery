@@ -28,6 +28,8 @@ export const codes = {
   BURNEDINSIDE: "🌲",
   BURNSIDE: "BURNEDINSIDE",
   BUTTERNUBBINS: "you've earned a treat! enter 'dispense my treat' to download",
-  "DISPENSE MY TREAT": "wallpapers, 🦓✨"
+  "DISPENSE MY TREAT": "wallpapers, 🦓✨",
+  BYEGOLD: "BYE!",
+  CARD: "DREAM DEMON",
   // Puedes agregar más códigos aquí.
 };

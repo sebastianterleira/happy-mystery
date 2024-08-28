@@ -183,6 +183,7 @@ import VideoController from "../components/VideoController.astro"
     const stahpSound = document.getElementById('stahpSound') as HTMLAudioElement;
     const hl3Image = document.getElementById("hl3Image") as HTMLImageElement;
     const sadleysBar = document.getElementById("sadleysBar") as HTMLImageElement;
+    const cardBill = document.getElementById("cardBill") as HTMLImageElement;
 
     if (!codes[input]) {
       // Si el código es incorrecto
@@ -316,6 +317,14 @@ import VideoController from "../components/VideoController.astro"
         document.body.removeChild(downloadLink); // Elimina el enlace del DOM
         resetBlinkEffect(true);
         document.getElementById("result").innerText = result;
+      } else if (input === "CARD") {
+        imageContainer.style.display = 'flex';
+        cardBill.classList.add("visible");
+        buttonCloseBottom.classList.add("not-display");
+        document.getElementById("result").innerText = '';
+        document.getElementById("text-image").innerText = "";
+        contentRevealSound.volume = 1;
+        contentRevealSound.play();
       } else {
         resetBlinkEffect(true);
         document.getElementById("result").innerText = result;

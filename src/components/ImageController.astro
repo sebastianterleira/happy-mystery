@@ -9,6 +9,7 @@ import Lamar from "../assets/images/lamar.jpg"
 import Scientist from "../assets/images/scientist.webp"
 import HL3 from "../assets/images/HL3.jpg"
 import SadleysBar from "../assets/images/OSADLEYSLOGO.png"
+import cardBill from "../assets/images/cardBill.png"
 ---
 
 <div id="imageContainer">
@@ -26,6 +27,7 @@ import SadleysBar from "../assets/images/OSADLEYSLOGO.png"
       <Image src={Yoyo} width={400} height={390} alt="yoyolafrenchie" id="yoyoImage" loading="eager" class="imagen"/>
       <Image src={Resurrection} width={510} height={410} alt="boleto para resurreción gratis" id="resurrectionImage" loading="eager" class="imagen"/>
       <Image src={NotApproved} width={690} height={480} alt="NOT S&P APPROVED, WASH YOUR MOUNTh OUT WITH SOAP!" id="notApproved" loading="eager" class="notApproved"/>
+      <Image src={cardBill} width={760} height={480} alt="BILL CIPHER, DREAM DEMON" id="cardBill" loading="eager" class="cardBill"/>
       <Image src={Lamar} width={400} height={390} alt="Es lamar, el headcrab mas importante!" id="lamarImage" loading="eager" class="imagen"/>
       <Image src={Scientist} width={400} height={390} alt="Stahpppp!, Dargh!" id="scientistImage" loading="eager" class="imagen"/>
       <Image src={HL3} width={450} height={400} alt="I want to believe" id="hl3Image" loading="eager" class="imagen"/>
@@ -178,6 +180,11 @@ import SadleysBar from "../assets/images/OSADLEYSLOGO.png"
     width: 100%;
     max-width: 690px;
   }
+
+  .cardBill {
+    width: 100%;
+    max-width: 760px;
+  }
 </style>
 
 <style is:global>
@@ -208,7 +215,8 @@ import SadleysBar from "../assets/images/OSADLEYSLOGO.png"
   #lamarImage,
   #scientistImage, 
   #hl3Image,
-  #sadleysBar {
+  #sadleysBar,
+  #cardBill {
     height: auto;
     display: none;
   }
