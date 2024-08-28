@@ -24,6 +24,7 @@ export const codes = {
   BLENDINBLANDIN: "Agente de tiempo perdido y presunto incompetente",
   BLENDINBLENJAMINBLANDIN: "Agente de tiempo perdido y presunto incompetente",
   LIFE: "LIFE: 72% COMPLETE, NOW LOADING: DEATH",
-  BREAKUP: "O'Sadleys"
+  BREAKUP: "O'Sadleys",
+  BURNEDINSIDE: "🌲",
   // Puedes agregar más códigos aquí.
 };
