@@ -34,6 +34,8 @@ export const codes = {
   CHIP: "No debiste decirme eso.",
   CIA: "TU CAMARÁ WEB ESTA ENCENDIDA, ESTAMOS MIRANDO.",
   CIPHERTOLOGY: "MANTÉN LA MENTE ABIERTA",
-  CLONE: "¡Ahora es tu problema! ¡Solo mantenlo alejado de líquidos!"
+  CLONE: "¡Ahora es tu problema! ¡Solo mantenlo alejado de líquidos!",
+  CONSPIRACY: "conspiracion?!",
+  CRAZ: "Mabel te dice que eres el mejor.",
   // Puedes agregar más códigos aquí.
 };
