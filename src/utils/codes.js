@@ -43,7 +43,11 @@ export const codes = {
   CURSEWITTEBANE: "OUIJA",
   DEERTEETH: "Para ti niño 😉",
   DICK: "NOT S&P approved, wash your mouth out with soap!",
-  
-  // CURSED: "TODO: hacer zoom"
+  DIONARAP: "..",
+  DIPPYFRESH: "Burger King Kid's Club",
+  DISCOGIRL: "DISCOGIRL",
+
+
+  // CURSED: "TODO: hacer zoom" =>  destructionisaformofcreation https://codepen.io/angrygabo/pen/KKVKedJ
   // Puedes agregar más códigos aquí.
 };

@@ -7,6 +7,7 @@ import VideoController from "../components/VideoController.astro"
   <div class="opacity__container">
     <audio src="/sounds/error.mp3" id="error"></audio>
     <audio src="/sounds/STAHP.mp3" id="stahpSound"></audio>
+    <audio src="/sounds/discogirl.mp3" id="discoGirl"></audio>
     <audio src="/sounds/content-reveal.mp3" id="content-reveal"></audio>
     <h1>△</h1>
   <div class="content__form">
@@ -190,6 +191,8 @@ import VideoController from "../components/VideoController.astro"
     const ouijaBIll = document.getElementById("ouijaBIll") as HTMLVideoElement;
     const planchetteBill = document.getElementById("planchetteBill") as HTMLVideoElement;
     const deerteethGif = document.getElementById("deerteethGif") as HTMLImageElement;
+    const dionarap = document.getElementById("dionarap") as HTMLImageElement;
+    const discoGirl = document.getElementById('discoGirl') as HTMLAudioElement;
 
     if (!codes[input]) {
       // Si el código es incorrecto
@@ -392,6 +395,26 @@ import VideoController from "../components/VideoController.astro"
         document.getElementById("text-image").innerText = result;
         contentRevealSound.volume = 1;
         contentRevealSound.play();
+      } else if (input === "DIONARAP") {
+        imageContainer.style.display = 'flex';
+        dionarap.classList.add("visible");
+        document.getElementById("result").innerText = '';
+        document.getElementById("text-image").innerText = "";
+        contentRevealSound.volume = 1;
+        contentRevealSound.play();
+      } else if (input === "DIPPYFRESH") {
+        document.getElementById("result").innerText = result;
+
+        resetBlinkEffect(true);
+        setTimeout(() => {
+          window.open("https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2F4p4142atrf381.jpg", "_blank");
+        }, 1000); 
+      } else if (input === "DISCOGIRL") {
+        resetBlinkEffect(true);
+        discoGirl.currentTime = 0;
+        discoGirl.volume = 1;
+        discoGirl.play();
+        document.getElementById("result").innerText = result;
       } else {
         resetBlinkEffect(true);
         document.getElementById("result").innerText = result;
