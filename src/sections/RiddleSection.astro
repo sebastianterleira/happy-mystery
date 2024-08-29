@@ -193,6 +193,9 @@ import VideoController from "../components/VideoController.astro"
     const deerteethGif = document.getElementById("deerteethGif") as HTMLImageElement;
     const dionarap = document.getElementById("dionarap") as HTMLImageElement;
     const discoGirl = document.getElementById('discoGirl') as HTMLAudioElement;
+    const rickrollVideo = document.getElementById('rickrollVideo') as HTMLVideoElement;
+    const axolotVideo = document.getElementById('axolotVideo') as HTMLVideoElement;
+    const marceloVideo = document.getElementById('marceloVideo') as HTMLVideoElement;
 
     if (!codes[input]) {
       // Si el código es incorrecto
@@ -317,7 +320,7 @@ import VideoController from "../components/VideoController.astro"
           videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
           opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
         });
-      } else if (input === "DISPENSE MY TREAT") {
+      } else if (input === "DISPENSEMYTREAT") {
         const downloadLink = document.createElement("a");
         downloadLink.href = "/download/BILLS FILES DO NOT OPEN!!.zip"; // Ruta del archivo
         downloadLink.download = "BILLS FILES DO NOT OPEN!!.zip"; // Nombre del archivo para descargar
@@ -415,6 +418,46 @@ import VideoController from "../components/VideoController.astro"
         discoGirl.volume = 1;
         discoGirl.play();
         document.getElementById("result").innerText = result;
+      } else if (input === "RICK") {
+        document.getElementById("result").innerText = result;
+
+        opacityContainer.classList.remove('loaded');
+        videoContainer.style.display = 'block';
+        rickrollVideo.classList.add("visible");
+        rickrollVideo.play();
+
+        rickrollVideo.addEventListener('ended', () => {
+          rickrollVideo.classList.remove("visible");
+          videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
+          opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
+        });
+      } else if (input === "DOESGODEXIST" || input === "FACEOFGOD") {
+        document.getElementById("result").innerText = result;
+
+        opacityContainer.classList.remove('loaded');
+        videoContainer.style.display = 'block';
+        axolotVideo.classList.add("visible");
+        axolotVideo.play();
+
+        axolotVideo.addEventListener('ended', () => {
+          axolotVideo.classList.remove("visible");
+          videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
+          opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
+        });
+      } else if (input === "MARCELO") {
+        document.getElementById("result").innerText = result;
+
+        opacityContainer.classList.remove('loaded');
+        videoContainer.style.display = 'block';
+        marceloVideo.classList.add("visible");
+        marceloVideo.volume = 0.7;
+        marceloVideo.play();
+
+        marceloVideo.addEventListener('ended', () => {
+          marceloVideo.classList.remove("visible");
+          videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
+          opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
+        });
       } else {
         resetBlinkEffect(true);
         document.getElementById("result").innerText = result;

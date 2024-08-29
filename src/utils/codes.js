@@ -27,8 +27,8 @@ export const codes = {
   BREAKUP: "O'Sadleys",
   BURNEDINSIDE: "🌲",
   BURNSIDE: "BURNEDINSIDE",
-  BUTTERNUBBINS: "you've earned a treat! enter 'dispense my treat' to download",
-  "DISPENSE MY TREAT": "wallpapers, 🦓✨",
+  BUTTERNUBBINS: "you've earned a treat! enter 'DISPENSEMYTREAT' to download",
+  DISPENSEMYTREAT: "wallpapers, 🦓✨",
   BYEGOLD: "BYE!",
   CARD: "DREAM DEMON",
   CHIP: "No debiste decirme eso.",
@@ -46,7 +46,20 @@ export const codes = {
   DIONARAP: "..",
   DIPPYFRESH: "Burger King Kid's Club",
   DISCOGIRL: "DISCOGIRL",
-
+  DISNEY: "RAT:GIF, censurado por su protección",
+  DISNEYLAND: "RAT:GIF, censurado por su protección",
+  DOESGODEXIST: "no existe",
+  RICK: "RICKROLLEADO EN 2024",
+  DOGE: "PRIVILEGIOS DE VIDA REVOCADOS, AHORA LIBERAN GAS VENENOSO.",
+  DUCKTECTIVE: `DuckTective STARS in "love, quacktually" coming to: "OI, its the cockney channel innit?" this fall`,
+  EASTEREGG: "EASTER EGGS? SUENA A CONSPIRACIÓN",
+  ELON: "PRIVILEGIOS DE VIDA REVOCADOS, AHORA LIBERAN GAS VENENOSO.",
+  EPCOT: "RAT:GIF, censurado por su protección",
+  EMMALINEBUTTERNUBBINS: "you've earned a treat! enter 'DISPENSEMYTREAT' to download",
+  EUCLID: "FORMA DE VIDA NO ENCONTRADA...",
+  EUCLYDIA: "DIMENSIÓN NO ENCONTRADA",
+  FACEOFGOD: "LA CARA DE DIOS?",
+  MARCELO: "lo conociste!",
 
   // CURSED: "TODO: hacer zoom" =>  destructionisaformofcreation https://codepen.io/angrygabo/pen/KKVKedJ
   // Puedes agregar más códigos aquí.
