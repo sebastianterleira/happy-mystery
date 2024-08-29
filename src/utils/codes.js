@@ -37,5 +37,6 @@ export const codes = {
   CLONE: "¡Ahora es tu problema! ¡Solo mantenlo alejado de líquidos!",
   CONSPIRACY: "conspiracion?!",
   CRAZ: "Mabel te dice que eres el mejor.",
+  CREEPYPASTA: "△: Lo tenia que hacer amigo, jajajaja",
   // Puedes agregar más códigos aquí.
 };

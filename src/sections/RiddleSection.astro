@@ -186,6 +186,7 @@ import VideoController from "../components/VideoController.astro"
     const cardBill = document.getElementById("cardBill") as HTMLImageElement;
     const cloneDipper = document.getElementById("cloneDipper") as HTMLImageElement;
     const conspiracyVideo = document.getElementById("conspiracyVideo") as HTMLVideoElement;
+    const jeffVideo = document.getElementById("jeffVideo") as HTMLVideoElement;
 
     if (!codes[input]) {
       // Si el código es incorrecto
@@ -342,7 +343,7 @@ import VideoController from "../components/VideoController.astro"
         conspiracyVideo.classList.add("visible");
         conspiracyVideo.play();
 
-        burnedInsideVideo.addEventListener('ended', () => {
+        conspiracyVideo.addEventListener('ended', () => {
           conspiracyVideo.classList.remove("visible");
           videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
           opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
@@ -354,6 +355,19 @@ import VideoController from "../components/VideoController.astro"
         setTimeout(() => {
           window.open("https://www.youtube.com/watch?v=lkQE5wuBFeY", "_blank");
         }, 1000); 
+      } else if (input === "CREEPYPASTA") {
+        document.getElementById("result").innerText = result;
+
+        opacityContainer.classList.remove('loaded');
+        videoContainer.style.display = 'block';
+        jeffVideo.classList.add("visible");
+        jeffVideo.play();
+
+        jeffVideo.addEventListener('ended', () => {
+          jeffVideo.classList.remove("visible");
+          videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
+          opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
+        });
       } else {
         resetBlinkEffect(true);
         document.getElementById("result").innerText = result;
