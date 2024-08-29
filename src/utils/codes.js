@@ -38,5 +38,9 @@ export const codes = {
   CONSPIRACY: "conspiracion?!",
   CRAZ: "Mabel te dice que eres el mejor.",
   CREEPYPASTA: "△: Lo tenia que hacer amigo, jajajaja",
+  CRYPTO: "PRIVILEGIOS DE VIDA REVOCADOS, AHORA LIBERAN GAS VENENOSO.",
+  CUNT: "NOT S&P approved, wash your mouth out with soap!",
+  CURSEWITTEBANE: "OUIJA",
+  // CURSED: "TODO: hacer zoom"
   // Puedes agregar más códigos aquí.
 };

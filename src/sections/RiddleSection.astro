@@ -187,6 +187,8 @@ import VideoController from "../components/VideoController.astro"
     const cloneDipper = document.getElementById("cloneDipper") as HTMLImageElement;
     const conspiracyVideo = document.getElementById("conspiracyVideo") as HTMLVideoElement;
     const jeffVideo = document.getElementById("jeffVideo") as HTMLVideoElement;
+    const ouijaBIll = document.getElementById("ouijaBIll") as HTMLVideoElement;
+    const planchetteBill = document.getElementById("planchetteBill") as HTMLVideoElement;
 
     if (!codes[input]) {
       // Si el código es incorrecto
@@ -246,7 +248,7 @@ import VideoController from "../components/VideoController.astro"
         document.getElementById("text-image").innerText = result;
         contentRevealSound.volume = 1;
         contentRevealSound.play();
-      } else if (input === "CUM" || input === "ASSHOLE" || input === "BITCH") {
+      } else if (input === "CUM" || input === "ASSHOLE" || input === "BITCH" || input === "CUNT") {
         imageContainer.style.display = 'flex';
         notApproved.classList.add("visible");
         buttonCloseBottom.classList.add("not-display");
@@ -368,6 +370,20 @@ import VideoController from "../components/VideoController.astro"
           videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
           opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
         });
+      } else if (input === "CURSEWITTEBANE") {
+        imageContainer.style.display = 'flex';
+        ouijaBIll.classList.add("visible");
+        planchetteBill.classList.add("visible");
+        document.getElementById("result").innerText = '';
+        document.getElementById("text-image").innerText = '';
+        contentRevealSound.volume = 1;
+        contentRevealSound.play();
+        const downloadLink = document.createElement("a");
+        downloadLink.href = "/download/OUIJA.zip"; // Ruta del archivo
+        downloadLink.download = "OUIJA.zip"; // Nombre del archivo para descargar
+        document.body.appendChild(downloadLink); // Agregar al DOM
+        downloadLink.click(); // Simula un clic para iniciar la descarga
+        document.body.removeChild(downloadLink); // Elimina el enlace del DOM
       } else {
         resetBlinkEffect(true);
         document.getElementById("result").innerText = result;
