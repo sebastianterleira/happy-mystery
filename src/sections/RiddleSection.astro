@@ -9,6 +9,7 @@ import VideoController from "../components/VideoController.astro"
     <audio src="/sounds/STAHP.mp3" id="stahpSound"></audio>
     <audio src="/sounds/discogirl.mp3" id="discoGirl"></audio>
     <audio src="/sounds/content-reveal.mp3" id="content-reveal"></audio>
+    <audio src="/sounds/We'll meet again.mp3" id="billWellMeetAgainAudio"></audio>
     <h1>△</h1>
   <div class="content__form">
     <input type="text" id="input" autocomplete="off"/>
@@ -197,6 +198,8 @@ import VideoController from "../components/VideoController.astro"
     const axolotVideo = document.getElementById('axolotVideo') as HTMLVideoElement;
     const marceloVideo = document.getElementById('marceloVideo') as HTMLVideoElement;
     const dotaVideo = document.getElementById('dotaVideo') as HTMLVideoElement;
+    const billWellMeetAgainAudio = document.getElementById('billWellMeetAgainAudio') as HTMLAudioElement;
+    const billWellMeetAgainVideo = document.getElementById('billWellMeetAgainVideo') as HTMLVideoElement;
 
     if (!codes[input]) {
       // Si el código es incorrecto
@@ -469,6 +472,20 @@ import VideoController from "../components/VideoController.astro"
 
         dotaVideo.addEventListener('ended', () => {
           dotaVideo.classList.remove("visible");
+          videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
+          opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
+        });
+      } else if (input === "WELLMEETAGAIN") {
+        document.getElementById("result").innerText = result;
+
+        opacityContainer.classList.remove('loaded');
+        videoContainer.style.display = 'block';
+        billWellMeetAgainVideo.classList.add("visible");
+        billWellMeetAgainVideo.play();
+        billWellMeetAgainAudio.play();
+
+        billWellMeetAgainVideo.addEventListener('ended', () => {
+          billWellMeetAgainVideo.classList.remove("visible");
           videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
           opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
         });
