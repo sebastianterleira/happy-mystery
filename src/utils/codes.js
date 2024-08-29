@@ -60,6 +60,7 @@ export const codes = {
   EUCLYDIA: "DIMENSIÓN NO ENCONTRADA",
   FACEOFGOD: "LA CARA DE DIOS?",
   MARCELO: "lo conociste!",
+  DOTA: "Vi sitter i ventrilo och spelar DotA"
 
   // CURSED: "TODO: hacer zoom" =>  destructionisaformofcreation https://codepen.io/angrygabo/pen/KKVKedJ
   // Puedes agregar más códigos aquí.
