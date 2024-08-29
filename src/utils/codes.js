@@ -8,7 +8,7 @@ export const codes = {
   BILL: "Asi que quieres saber mas sobre mi...",
   BILLCIPHER: "Soy una idea perfectamente geometrica.",
   DORITO: "No debiste decirme eso.",
-  MUERTE: "¿Que es eso?",
+  MUERTE: "LA PRIMA GÓTICA DE LA VIDA.",
   ANSWER: "QUESTION",
   ASSHOLE: 'NOT S&P approved, wash your mouth out with soap!',
   CUM: "NOT S&P approved, wash your mouth out with soap!",
@@ -41,6 +41,9 @@ export const codes = {
   CRYPTO: "PRIVILEGIOS DE VIDA REVOCADOS, AHORA LIBERAN GAS VENENOSO.",
   CUNT: "NOT S&P approved, wash your mouth out with soap!",
   CURSEWITTEBANE: "OUIJA",
+  DEERTEETH: "Para ti niño 😉",
+  DICK: "NOT S&P approved, wash your mouth out with soap!",
+  
   // CURSED: "TODO: hacer zoom"
   // Puedes agregar más códigos aquí.
 };

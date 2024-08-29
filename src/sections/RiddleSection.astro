@@ -189,6 +189,7 @@ import VideoController from "../components/VideoController.astro"
     const jeffVideo = document.getElementById("jeffVideo") as HTMLVideoElement;
     const ouijaBIll = document.getElementById("ouijaBIll") as HTMLVideoElement;
     const planchetteBill = document.getElementById("planchetteBill") as HTMLVideoElement;
+    const deerteethGif = document.getElementById("deerteethGif") as HTMLImageElement;
 
     if (!codes[input]) {
       // Si el código es incorrecto
@@ -248,7 +249,7 @@ import VideoController from "../components/VideoController.astro"
         document.getElementById("text-image").innerText = result;
         contentRevealSound.volume = 1;
         contentRevealSound.play();
-      } else if (input === "CUM" || input === "ASSHOLE" || input === "BITCH" || input === "CUNT") {
+      } else if (input === "CUM" || input === "ASSHOLE" || input === "BITCH" || input === "CUNT" || input === "DICK") {
         imageContainer.style.display = 'flex';
         notApproved.classList.add("visible");
         buttonCloseBottom.classList.add("not-display");
@@ -384,6 +385,13 @@ import VideoController from "../components/VideoController.astro"
         document.body.appendChild(downloadLink); // Agregar al DOM
         downloadLink.click(); // Simula un clic para iniciar la descarga
         document.body.removeChild(downloadLink); // Elimina el enlace del DOM
+      } else if (input === "DEERTEETH") {
+        imageContainer.style.display = 'flex';
+        deerteethGif.classList.add("visible");
+        document.getElementById("result").innerText = '';
+        document.getElementById("text-image").innerText = result;
+        contentRevealSound.volume = 1;
+        contentRevealSound.play();
       } else {
         resetBlinkEffect(true);
         document.getElementById("result").innerText = result;
