@@ -17,7 +17,7 @@ import VideoController from "../components/VideoController.astro"
       <p class="text__button">Submit</p>
     </button>
   </div>
-  <p id="result">bla</p>
+  <p id="result">PLS, dont type "CODES"</p>
   </div>
   <VideoController />
   <ImageController />
@@ -27,7 +27,6 @@ import VideoController from "../components/VideoController.astro"
   #result {
     font-size: 1rem;
     color: #fff;
-    opacity: 0;
     text-align: center;
     text-wrap: pretty;
   }
@@ -503,7 +502,6 @@ import VideoController from "../components/VideoController.astro"
         document.getElementById("result").innerText = result;
       }
 
-    document.getElementById("result").style.opacity = "1";
   }
 
   document.getElementById('input').addEventListener('keydown', function(event) {

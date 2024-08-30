@@ -62,6 +62,7 @@ export const codes = {
   MARCELO: "lo conociste!",
   DOTA: "Vi sitter i ventrilo och spelar DotA",
   WELLMEETAGAIN: "BILL: nooo!, como apago esto!!?",
+  CODES: "Desbloqueaste todos los códigos!, recuerda que tambien puedes descubrirlos!",
 
   // CURSED: "TODO: hacer zoom" =>  destructionisaformofcreation https://codepen.io/angrygabo/pen/KKVKedJ
   // Puedes agregar más códigos aquí.
