@@ -497,6 +497,15 @@ import VideoController from "../components/VideoController.astro"
         document.body.removeChild(downloadLink); // Elimina el enlace del DOM
         resetBlinkEffect(true);
         document.getElementById("result").innerText = result;
+      } else if (input === "CODES") {
+        const downloadLink = document.createElement("a");
+        downloadLink.href = "/download/CODES.txt"; // Ruta del archivo
+        downloadLink.download = "CODES.txt"; // Nombre del archivo para descargar
+        document.body.appendChild(downloadLink); // Agregar al DOM
+        downloadLink.click(); // Simula un clic para iniciar la descarga
+        document.body.removeChild(downloadLink); // Elimina el enlace del DOM
+        resetBlinkEffect(true);
+        document.getElementById("result").innerText = result;
       } else {
         resetBlinkEffect(true);
         document.getElementById("result").innerText = result;
