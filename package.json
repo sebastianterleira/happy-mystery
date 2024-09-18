@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "astro": "^4.14.4",
+    "astro-seo": "^0.8.4",
     "nanostores": "^0.11.2"
   }
 }

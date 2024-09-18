@@ -1,4 +1,6 @@
 ---
+import { SEO } from "astro-seo";
+
 import '../styles/global.css';
 
 interface Props {
@@ -12,11 +14,45 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👁️</text></svg>">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<SEO
+		title={title}
+		description="Web inspirado en la serie Gravity Falls con cientos de códigos por descubrir △"
+		canonical="https://thisisnotahappybirthdaywebsite.vercel.app/"
+		openGraph={{
+			basic: {
+				title: "thisisnotahappybirthdaywebsite",
+				type: "website",
+				url: "https://thisisnotahappybirthdaywebsite.vercel.app/",
+				image: "/images/banner-metatag.png",
+			},
+			image: {
+				alt: "Banner con el logo de bill cipher",
+				width: 1366,
+				height: 630,
+			},
+			optional: {
+				description: "Web inspirado en la serie Gravity Falls con cientos de códigos por descubrir △"
+			}
+		}}
+		twitter={{
+			title: "thisisnotahappybirthdaywebsite",
+			description: "Web inspirado en la serie Gravity Falls con cientos de códigos por descubrir △",
+			card: "summary_large_image",
+			image: "/images/banner-metatag.png",
+			imageAlt: "Banner con el logo de bill cipher"
+		}}
+		extend={{
+			meta: [
+				{ property: "twitter:url", content: "https://thisisnotahappybirthdaywebsite.vercel.app/" },
+				{ name: "viewport", content: "width=device-width" },
+				{ name: "theme-color", content: "#fff" }
+			]
+		}}
+	/>
 	</head>
 	<body>
 		<slot />
