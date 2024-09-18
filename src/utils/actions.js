@@ -1,24 +1,29 @@
 import { codes } from "./codes";
-import { resetBlinkEffect } from './utils.js';
+import {
+  resetBlinkEffect,
+  handleImageDisplay,
+  handleWindowOpen,
+  handleVideoDisplay,
+  handleFileDownload,
+} from "./utils.js";
 
 const result = document.getElementById("result");
-const textImage = document.getElementById("text-image");
-const doritoVideo = document.getElementById('doritoVideo');
-const videoContainer = document.getElementById('videoContainer');
-const babyBillImage = document.getElementById('babyBillImage');
-const contentRevealSound = document.getElementById('content-reveal');
-const yoyoImage = document.getElementById('yoyoImage');
-const opacityContainer = document.querySelector('.opacity__container');
-const resurrectionImage = document.getElementById('resurrectionImage');
-const buttonCloseBottom = document.getElementById('close__container-bottom');
-const notApproved = document.getElementById('notApproved');
-const imageContainer = document.getElementById('imageContainer');
+const doritoVideo = document.getElementById("doritoVideo");
+const videoContainer = document.getElementById("videoContainer");
+const babyBillImage = document.getElementById("babyBillImage");
+const contentRevealSound = document.getElementById("content-reveal");
+const yoyoImage = document.getElementById("yoyoImage");
+const opacityContainer = document.querySelector(".opacity__container");
+const resurrectionImage = document.getElementById("resurrectionImage");
+const buttonCloseBottom = document.getElementById("close__container-bottom");
+const notApproved = document.getElementById("notApproved");
+const imageContainer = document.getElementById("imageContainer");
 const scientistImage = document.getElementById("scientistImage");
-const stahpSound = document.getElementById('stahpSound');
+const stahpSound = document.getElementById("stahpSound");
 const lamarImage = document.getElementById("lamarImage");
 const hl3Image = document.getElementById("hl3Image");
 const sadleysBar = document.getElementById("sadleysBar");
-const burnedInsideVideo = document.getElementById('burnedInsideVideo');
+const burnedInsideVideo = document.getElementById("burnedInsideVideo");
 const cardBill = document.getElementById("cardBill");
 const cloneDipper = document.getElementById("cloneDipper");
 const conspiracyVideo = document.getElementById("conspiracyVideo");
@@ -27,410 +32,274 @@ const ouijaBIll = document.getElementById("ouijaBIll");
 const planchetteBill = document.getElementById("planchetteBill");
 const deerteethGif = document.getElementById("deerteethGif");
 const dionarap = document.getElementById("dionarap");
-const rickrollVideo = document.getElementById('rickrollVideo');
-const discoGirl = document.getElementById('discoGirl');
-const axolotVideo = document.getElementById('axolotVideo');
-const marceloVideo = document.getElementById('marceloVideo');
-const dotaVideo = document.getElementById('dotaVideo');
-const billWellMeetAgainAudio = document.getElementById('billWellMeetAgainAudio');
-const billWellMeetAgainVideo = document.getElementById('billWellMeetAgainVideo');
+const rickrollVideo = document.getElementById("rickrollVideo");
+const discoGirl = document.getElementById("discoGirl");
+const axolotVideo = document.getElementById("axolotVideo");
+const marceloVideo = document.getElementById("marceloVideo");
+const dotaVideo = document.getElementById("dotaVideo");
+const billWellMeetAgainAudio = document.getElementById("billWellMeetAgainAudio");
+const billWellMeetAgainVideo = document.getElementById("billWellMeetAgainVideo");
 
 export const actions = {
-  "MYSTERY": () => {
-    resetBlinkEffect(true);
-    result.innerText = codes["MYSTERY"];
-    setTimeout(() => {window.location.href = "/mystery";}, 4000); 
+  MYSTERY: () => {
+    handleWindowOpen(codes["MYSTERY"], "/mystery");
   },
-  "BILL": () => {
-    resetBlinkEffect(true);
-    result.innerText = codes["BILL"];
-    setTimeout(() => window.open("https://en.wikipedia.org/wiki/Eye_of_Providence", "_blank"), 1000);
+  BILL: () => {
+    handleWindowOpen(
+      codes["BILL"],
+      "https://en.wikipedia.org/wiki/Eye_of_Providence"
+    );
   },
-  "BILLCIPHER": () => {
-    resetBlinkEffect(true);
-    result.innerText = codes["BILLCIPHER"];
-    setTimeout(() => window.open("https://en.wikipedia.org/wiki/Triangle", "_blank"), 1000);
+  BILLCIPHER: () => {
+    handleWindowOpen(
+      codes["BILLCIPHER"],
+      "https://en.wikipedia.org/wiki/Triangle"
+    );
   },
-  "DORITO": () => {
-    result.innerText = codes["DORITO"];
-
-    opacityContainer.classList.remove('loaded');
-    videoContainer.style.display = 'block';
-    doritoVideo.classList.add("visible");
-    doritoVideo.play();
-
-    doritoVideo.addEventListener('ended', () => {
-      doritoVideo.classList.remove("visible");
-      videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
-      opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
-    });
+  DORITO: () => {
+    handleVideoDisplay(
+      doritoVideo,
+      videoContainer,
+      opacityContainer,
+      codes["DORITO"]
+    );
   },
-  "CHIP": () => {
-    result.innerText = codes["CHIP"];
-
-    opacityContainer.classList.remove('loaded');
-    videoContainer.style.display = 'block';
-    doritoVideo.classList.add("visible");
-    doritoVideo.play();
-
-    doritoVideo.addEventListener('ended', () => {
-      doritoVideo.classList.remove("visible");
-      videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
-      opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
-    });
+  CHIP: () => {
+    handleVideoDisplay(
+      doritoVideo,
+      videoContainer,
+      opacityContainer,
+      codes["CHIP"]
+    );
   },
-  "BABY": () => {
-    imageContainer.style.display = 'flex';
-    babyBillImage.classList.add("visible")
-    result.innerText = '';
-    textImage.innerText = codes["BABY"];
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+  BABY: () => {
+    handleImageDisplay(
+      babyBillImage,
+      codes["BABY"],
+      contentRevealSound,
+      imageContainer
+    );
   },
-  "BABYBILL": () => {
-    imageContainer.style.display = 'flex';
-    babyBillImage.classList.add("visible")
-    result.innerText = '';
-    textImage.innerText = codes["BABY"];
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+  BABYBILL: () => {
+    handleImageDisplay(
+      babyBillImage,
+      codes["BABY"],
+      contentRevealSound,
+      imageContainer
+    );
   },
-  "YOYO": () => {
-    imageContainer.style.display = 'flex';
-    yoyoImage.classList.add("visible")
-    result.innerText = '';
-    textImage.innerText = codes["YOYO"];
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+  YOYO: () => {
+    handleImageDisplay(
+      yoyoImage,
+      codes["YOYO"],
+      contentRevealSound,
+      imageContainer
+    );
   },
-  "MUERTE": () => {
-    imageContainer.style.display = 'flex';
-    resurrectionImage.classList.add("visible")
-    result.innerText = '';
-    textImage.innerText = codes["MUERTE"];
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+  MUERTE: () => {
+    handleImageDisplay(
+      resurrectionImage,
+      codes["MUERTE"],
+      contentRevealSound,
+      imageContainer
+    );
   },
-  "CUM": () => {
-    imageContainer.style.display = 'flex';
-    notApproved.classList.add("visible");
+  CUM: () => {
     buttonCloseBottom.classList.add("not-display");
-    result.innerText = '';
-    textImage.innerText = '';
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+    handleImageDisplay(notApproved, "", contentRevealSound, imageContainer);
   },
-  "ASSHOLE": () => {
-    imageContainer.style.display = 'flex';
-    notApproved.classList.add("visible");
+  ASSHOLE: () => {
     buttonCloseBottom.classList.add("not-display");
-    result.innerText = '';
-    textImage.innerText = '';
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+    handleImageDisplay(notApproved, "", contentRevealSound, imageContainer);
   },
-  "BITCH": () => {
-    imageContainer.style.display = 'flex';
-    notApproved.classList.add("visible");
+  BITCH: () => {
     buttonCloseBottom.classList.add("not-display");
-    result.innerText = '';
-    textImage.innerText = '';
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+    handleImageDisplay(notApproved, "", contentRevealSound, imageContainer);
   },
-  "CUNT": () => {
-    imageContainer.style.display = 'flex';
-    notApproved.classList.add("visible");
+  CUNT: () => {
     buttonCloseBottom.classList.add("not-display");
-    result.innerText = '';
-    textImage.innerText = '';
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+    handleImageDisplay(notApproved, "", contentRevealSound, imageContainer);
   },
-  "DICK": () => {
-    imageContainer.style.display = 'flex';
-    notApproved.classList.add("visible");
+  DICK: () => {
     buttonCloseBottom.classList.add("not-display");
-    result.innerText = '';
-    textImage.innerText = '';
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+    handleImageDisplay(notApproved, "", contentRevealSound, imageContainer);
   },
-  "HL1": () => {
-    imageContainer.style.display = 'flex';
-    scientistImage.classList.add("visible");
-    result.innerText = '';
-    textImage.innerText = codes["HL1"];
+  HL1: () => {
     stahpSound.play();
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+    handleImageDisplay(
+      scientistImage,
+      codes["HL1"],
+      contentRevealSound,
+      imageContainer
+    );
   },
-  "HL2": () => {
-    imageContainer.style.display = 'flex';
-    lamarImage.classList.add("visible");
-    result.innerText = '';
-    textImage.innerText = codes["HL2"];
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+  HL2: () => {
+    handleImageDisplay(
+      lamarImage,
+      codes["HL2"],
+      contentRevealSound,
+      imageContainer
+    );
   },
-  "HL3": () => {
-    imageContainer.style.display = 'flex';
-    hl3Image.classList.add("visible");
-    result.innerText = '';
-    textImage.innerText = codes["HL3"];
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+  HL3: () => {
+    handleImageDisplay(
+      hl3Image,
+      codes["HL3"],
+      contentRevealSound,
+      imageContainer
+    );
   },
-  "CRYPTOGRAMCODEX": () => {
-    const downloadLink = document.createElement("a");
-    downloadLink.href = "/download/CRYPTOGRAM CODEX.zip"; // Ruta del archivo
-    downloadLink.download = "CRYPTOGRAM CODEX.zip"; // Nombre del archivo para descargar
-    document.body.appendChild(downloadLink); // Agregar al DOM
-    downloadLink.click(); // Simula un clic para iniciar la descarga
-    document.body.removeChild(downloadLink); // Elimina el enlace del DOM
-    resetBlinkEffect(true);
-    result.innerText = codes["CRYPTOGRAMCODEX"];
+  CRYPTOGRAMCODEX: () => {
+    handleFileDownload(
+      "/download/CRYPTOGRAM CODEX.zip",
+      "CRYPTOGRAM CODEX.zip",
+      codes["CRYPTOGRAMCODEX"]
+    );
   },
-  "BREAKUP": () => {
-    imageContainer.style.display = 'flex';
-    sadleysBar.classList.add("visible");
-    const downloadLink = document.createElement("a");
-    downloadLink.href = "/download/OSADLEYSLOGO.zip"; // Ruta del archivo
-    downloadLink.download = "OSADLEYSLOGO.zip"; // Nombre del archivo para descargar
-    document.body.appendChild(downloadLink); // Agregar al DOM
-    downloadLink.click(); // Simula un clic para iniciar la descarga
-    document.body.removeChild(downloadLink); // Elimina el enlace del DOM
-    resetBlinkEffect(true);
-    result.innerText = '';
-    textImage.innerText = codes["BREAKUP"];
+  BREAKUP: () => {
+    handleImageDisplay(
+      sadleysBar,
+      codes["BREAKUP"],
+      contentRevealSound,
+      imageContainer
+    );
+    handleFileDownload("/download/OSADLEYSLOGO.zip", "OSADLEYSLOGO.zip", "");
   },
-  "BURNEDINSIDE": () => {
-    result.innerText = codes["BURNEDINSIDE"];
-
-    opacityContainer.classList.remove('loaded');
-    videoContainer.style.display = 'block';
-    burnedInsideVideo.classList.add("visible");
-    burnedInsideVideo.play();
-
-    burnedInsideVideo.addEventListener('ended', () => {
-      burnedInsideVideo.classList.remove("visible");
-      videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
-      opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
-    });
+  BURNEDINSIDE: () => {
+    handleVideoDisplay(
+      burnedInsideVideo,
+      videoContainer,
+      opacityContainer,
+      codes["CHIP"]
+    );
   },
-  "DISPENSEMYTREAT": () => {
-    const downloadLink = document.createElement("a");
-    downloadLink.href = "/download/BILLS FILES DO NOT OPEN!!.zip"; // Ruta del archivo
-    downloadLink.download = "BILLS FILES DO NOT OPEN!!.zip"; // Nombre del archivo para descargar
-    document.body.appendChild(downloadLink); // Agregar al DOM
-    downloadLink.click(); // Simula un clic para iniciar la descarga
-    document.body.removeChild(downloadLink); // Elimina el enlace del DOM
-    resetBlinkEffect(true);
-    result.innerText = codes["DISPENSEMYTREAT"];
+  DISPENSEMYTREAT: () => {
+    handleFileDownload(
+      "/download/BILLS FILES DO NOT OPEN!!.zip",
+      "BILLS FILES DO NOT OPEN!!.zip",
+      codes["DISPENSEMYTREAT"]
+    );
   },
-  "CARD": () => {
-    imageContainer.style.display = 'flex';
-    cardBill.classList.add("visible");
+  CARD: () => {
     buttonCloseBottom.classList.add("not-display");
-    result.innerText = '';
-    textImage.innerText = '';
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+    handleImageDisplay(cardBill, "", contentRevealSound, imageContainer);
   },
-  "CLONE": () => {
-    imageContainer.style.display = 'flex';
-    cloneDipper.classList.add("visible")
-    result.innerText = '';
-    textImage.innerText = codes["CLONE"];
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+  CLONE: () => {
+    handleImageDisplay(
+      cloneDipper,
+      codes["CLONE"],
+      contentRevealSound,
+      imageContainer
+    );
   },
-  "CONSPIRACY": () => {
-    result.innerText = codes["CONSPIRACY"];
-
-    opacityContainer.classList.remove('loaded');
-    videoContainer.style.display = 'block';
-    conspiracyVideo.classList.add("visible");
-    conspiracyVideo.play();
-
-    conspiracyVideo.addEventListener('ended', () => {
-      conspiracyVideo.classList.remove("visible");
-      videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
-      opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
-    });
+  CONSPIRACY: () => {
+    handleVideoDisplay(
+      conspiracyVideo,
+      videoContainer,
+      opacityContainer,
+      codes["CONSPIRACY"]
+    );
   },
-  "CRAZ": () => {
-    result.innerText = codes["CRAZ"];
-
-    resetBlinkEffect(true);
-    setTimeout(() => {
-      window.open("https://www.youtube.com/watch?v=lkQE5wuBFeY", "_blank");
-    }, 1000); 
+  CRAZ: () => {
+    handleWindowOpen(
+      codes["CRAZ"],
+      "https://www.youtube.com/watch?v=lkQE5wuBFeY"
+    );
   },
-  "CREEPYPASTA": () => {
-    result.innerText = codes["CREEPYPASTA"];
-
-    opacityContainer.classList.remove('loaded');
-    videoContainer.style.display = 'block';
-    jeffVideo.classList.add("visible");
-    jeffVideo.play();
-
-    jeffVideo.addEventListener('ended', () => {
-      jeffVideo.classList.remove("visible");
-      videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
-      opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
-    });
+  CREEPYPASTA: () => {
+    handleVideoDisplay(
+      jeffVideo,
+      videoContainer,
+      opacityContainer,
+      codes["CREEPYPASTA"]
+    );
   },
-  "CURSEWITTEBANE": () => {
-    imageContainer.style.display = 'flex';
-    ouijaBIll.classList.add("visible");
+  CURSEWITTEBANE: () => {
     planchetteBill.classList.add("visible");
-    result.innerText = '';
-    textImage.innerText = '';
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
-    const downloadLink = document.createElement("a");
-    downloadLink.href = "/download/OUIJA.zip"; // Ruta del archivo
-    downloadLink.download = "OUIJA.zip"; // Nombre del archivo para descargar
-    document.body.appendChild(downloadLink); // Agregar al DOM
-    downloadLink.click(); // Simula un clic para iniciar la descarga
-    document.body.removeChild(downloadLink); // Elimina el enlace del DOM
+    handleImageDisplay(ouijaBIll, "", contentRevealSound, imageContainer);
+    handleFileDownload("/download/OUIJA.zip", "OUIJA.zip", "");
   },
-  "DEERTEETH": () => {
-    imageContainer.style.display = 'flex';
-    deerteethGif.classList.add("visible");
-    result.innerText = '';
-    textImage.innerText = codes["DEERTEETH"];
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+  DEERTEETH: () => {
+    handleImageDisplay(
+      deerteethGif,
+      codes["DEERTEETH"],
+      contentRevealSound,
+      imageContainer
+    );
   },
-  "DIONARAP": () => {
-    imageContainer.style.display = 'flex';
-    dionarap.classList.add("visible");
-    result.innerText = '';
-    textImage.innerText = '';
-    contentRevealSound.volume = 1;
-    contentRevealSound.play();
+  DIONARAP: () => {
+    handleImageDisplay(dionarap, "", contentRevealSound, imageContainer);
   },
-  "DIPPYFRESH": () => {
-    result.innerText = codes["DIPPYFRESH"];
-
-    resetBlinkEffect(true);
-    setTimeout(() => {
-      window.open("https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2F4p4142atrf381.jpg", "_blank");
-    }, 1000);
+  DIPPYFRESH: () => {
+    handleWindowOpen(
+      codes["DIPPYFRESH"],
+      "https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2F4p4142atrf381.jpg"
+    );
   },
-  "DISCOGIRL": () => {
+  DISCOGIRL: () => {
     resetBlinkEffect(true);
     discoGirl.currentTime = 0;
     discoGirl.volume = 1;
     discoGirl.play();
-    document.getElementById("result").innerText = result;
+    result.innerText = codes["DISCOGIRL"];
   },
-  "RICK": () => {
-    result.innerText = codes["RICK"];
-
-    opacityContainer.classList.remove('loaded');
-    videoContainer.style.display = 'block';
-    rickrollVideo.classList.add("visible");
-    rickrollVideo.play();
-
-    rickrollVideo.addEventListener('ended', () => {
-      rickrollVideo.classList.remove("visible");
-      videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
-      opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
-    });
+  RICK: () => {
+    handleVideoDisplay(
+      rickrollVideo,
+      videoContainer,
+      opacityContainer,
+      codes["RICK"]
+    );
   },
-  "DOESGODEXIST": () => {
-    result.innerText = codes["DOESGODEXIST"];
-
-    opacityContainer.classList.remove('loaded');
-    videoContainer.style.display = 'block';
-    axolotVideo.classList.add("visible");
-    axolotVideo.play();
-
-    axolotVideo.addEventListener('ended', () => {
-      axolotVideo.classList.remove("visible");
-      videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
-      opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
-    });
+  DOESGODEXIST: () => {
+    handleVideoDisplay(
+      axolotVideo,
+      videoContainer,
+      opacityContainer,
+      codes["DOESGODEXIST"]
+    );
   },
-  "FACEOFGOD": () => {
-    result.innerText = codes["FACEOFGOD"];
-
-    opacityContainer.classList.remove('loaded');
-    videoContainer.style.display = 'block';
-    axolotVideo.classList.add("visible");
-    axolotVideo.play();
-
-    axolotVideo.addEventListener('ended', () => {
-      axolotVideo.classList.remove("visible");
-      videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
-      opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
-    });
+  FACEOFGOD: () => {
+    handleVideoDisplay(
+      axolotVideo,
+      videoContainer,
+      opacityContainer,
+      codes["FACEOFGOD"]
+    );
   },
-  "MARCELO": () => {
-    result.innerText = codes["MARCELO"];
-
-    opacityContainer.classList.remove('loaded');
-    videoContainer.style.display = 'block';
-    marceloVideo.classList.add("visible");
-    marceloVideo.volume = 0.7;
-    marceloVideo.play();
-
-    marceloVideo.addEventListener('ended', () => {
-      marceloVideo.classList.remove("visible");
-      videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
-      opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
-    });
+  MARCELO: () => {
+    handleVideoDisplay(
+      marceloVideo,
+      videoContainer,
+      opacityContainer,
+      codes["MARCELO"]
+    );
   },
-  "DOTA": () => {
-    result.innerText = codes["DOTA"];
-
-    opacityContainer.classList.remove('loaded');
-    videoContainer.style.display = 'block';
-    dotaVideo.classList.add("visible");
-    dotaVideo.play();
-
-    dotaVideo.addEventListener('ended', () => {
-      dotaVideo.classList.remove("visible");
-      videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
-      opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
-    });
+  DOTA: () => {
+    handleVideoDisplay(
+      dotaVideo,
+      videoContainer,
+      opacityContainer,
+      codes["DOTA"]
+    );
   },
-  "WELLMEETAGAIN": () => {
-    result.innerText = codes["WELLMEETAGAIN"];
-
-    opacityContainer.classList.remove('loaded');
-    videoContainer.style.display = 'block';
-    billWellMeetAgainVideo.classList.add("visible");
-    billWellMeetAgainVideo.play();
+  WELLMEETAGAIN: () => {
     billWellMeetAgainAudio.play();
-
-    billWellMeetAgainVideo.addEventListener('ended', () => {
-      billWellMeetAgainVideo.classList.remove("visible");
-      videoContainer.style.display = 'none'; // Oculta el video después de reproducirse
-      opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
-    });
+    handleVideoDisplay(
+      billWellMeetAgainVideo,
+      videoContainer,
+      opacityContainer,
+      codes["WELLMEETAGAIN"]
+    );
   },
-  "DECODEX": () => {
-    const downloadLink = document.createElement("a");
-    downloadLink.href = "/download/DECODEX FILES.rar"; // Ruta del archivo
-    downloadLink.download = "DECODEX FILES.rar"; // Nombre del archivo para descargar
-    document.body.appendChild(downloadLink); // Agregar al DOM
-    downloadLink.click(); // Simula un clic para iniciar la descarga
-    document.body.removeChild(downloadLink); // Elimina el enlace del DOM
-    resetBlinkEffect(true);
-    result.innerText = codes["DECODEX"];
+  DECODEX: () => {
+    handleFileDownload(
+      "/download/DECODEX FILES.rar",
+      "DECODEX FILES.rar",
+      codes["DECODEX"]
+    );
   },
-  "CODES": () => {
-    const downloadLink = document.createElement("a");
-    downloadLink.href = "/download/CODES.txt"; // Ruta del archivo
-    downloadLink.download = "CODES.txt"; // Nombre del archivo para descargar
-    document.body.appendChild(downloadLink); // Agregar al DOM
-    downloadLink.click(); // Simula un clic para iniciar la descarga
-    document.body.removeChild(downloadLink); // Elimina el enlace del DOM
-    resetBlinkEffect(true);
-    result.innerText = codes["CODES"];
+  CODES: () => {
+    handleFileDownload("/download/CODES.txt", "CODES.txt", codes["CODES"]);
   },
-}
+};

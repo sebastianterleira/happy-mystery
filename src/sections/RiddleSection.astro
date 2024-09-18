@@ -144,17 +144,17 @@ import VideoController from "../components/VideoController.astro"
   function checkCode() {
     const input = (document.getElementById('input') as HTMLInputElement).value.toUpperCase();
     const result = codes[input] || "Incorrect code. Try again.";
+    const resultElement = document.getElementById('result');
 
     if (!codes[input]) {
-      // Si el código es incorrecto
       playErrorSound();
       resetBlinkEffect(false);
-      document.getElementById("result").innerText = result;
+      resultElement.innerText = result;
     } else if (actions[input]) {
       actions[input]();
     } else {
       resetBlinkEffect(true);
-      document.getElementById("result").innerText = result;
+      resultElement.innerText = result;
     }
   }
 

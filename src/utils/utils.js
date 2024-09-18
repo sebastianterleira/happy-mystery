@@ -24,7 +24,9 @@ export function playErrorSound() {
   errorSound.play();
 }
 
-export function handleVideoPlayback(videoElement, container, opacityContainer) {
+export function handleVideoDisplay(videoElement, container, opacityContainer, resultText) {
+  document.getElementById('result').innerText = resultText;
+
   opacityContainer.classList.remove('loaded');
   container.style.display = 'block';
   videoElement.classList.add('visible');
@@ -32,8 +34,8 @@ export function handleVideoPlayback(videoElement, container, opacityContainer) {
 
   videoElement.addEventListener('ended', () => {
     videoElement.classList.remove('visible');
-    container.style.display = 'none';
-    opacityContainer.classList.add('loaded');
+    container.style.display = 'none'; // Oculta el video después de reproducirse
+    opacityContainer.classList.add('loaded'); // Asegura que la sección esté completamente visible
   });
 }
 
@@ -44,4 +46,21 @@ export function handleImageDisplay(imageElement, resultText, contentSound, conta
   document.getElementById('text-image').innerText = resultText;
   contentSound.volume = 1;
   contentSound.play();
+}
+
+export const handleWindowOpen = (codeKey, url) => {
+  resetBlinkEffect(true);
+  document.getElementById("result").innerText = codeKey;
+  setTimeout(() => window.open(url, "_blank"), 1000);
+};
+
+export function handleFileDownload(filePath, fileName, resultText) {
+  const downloadLink = document.createElement('a');
+  downloadLink.href = filePath;
+  downloadLink.download = fileName;
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  document.body.removeChild(downloadLink);
+  resetBlinkEffect(true);
+  document.getElementById("result").innerText = resultText;
 }
