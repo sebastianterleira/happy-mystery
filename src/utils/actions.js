@@ -90,16 +90,16 @@ export const actions = {
     );
   },
   YOYO: () => {
+    handleWindowOpen(
+      codes["YOYO"],
+      "https://www.instagram.com/yoyolafrenchie/",
+      5000
+    );
     handleImageDisplay(
       yoyoImage,
       codes["YOYO"],
       contentRevealSound,
       imageContainer
-    );
-    handleWindowOpen(
-      codes["YOYO"],
-      "https://www.instagram.com/yoyolafrenchie/",
-      5000
     );
   },
   MUERTE: () => {
