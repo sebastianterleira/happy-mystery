@@ -63,8 +63,8 @@ export const codes = {
   DOTA: "Vi sitter i ventrilo och spelar DotA",
   WELLMEETAGAIN: "BILL: nooo!, como apago esto!!?",
   CODES: "Desbloqueaste todos los códigos!, recuerda que tambien puedes descubrirlos!",
-  GITHUB: "Encontraste mi repositorio...pueda que tambien seas todo un genio."
-
+  GITHUB: "Encontraste mi repositorio...pueda que tambien seas todo un genio.",
+  MIDUGOD: "BILL: a este tambien me lo comi...",
   // CURSED: "TODO: hacer zoom" =>  destructionisaformofcreation https://codepen.io/angrygabo/pen/KKVKedJ
   // Puedes agregar más códigos aquí.
 };

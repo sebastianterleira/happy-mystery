@@ -39,6 +39,7 @@ const marceloVideo = document.getElementById("marceloVideo");
 const dotaVideo = document.getElementById("dotaVideo");
 const billWellMeetAgainAudio = document.getElementById("billWellMeetAgainAudio");
 const billWellMeetAgainVideo = document.getElementById("billWellMeetAgainVideo");
+const miduGod = document.getElementById("midugod"); 
 
 export const actions = {
   MYSTERY: () => {
@@ -311,6 +312,14 @@ export const actions = {
     handleWindowOpen(
       codes["GITHUB"],
       "https://github.com/sebastianterleira/happy-mystery"
+    );
+  },
+  MIDUGOD: () => {
+    handleImageDisplay(
+      miduGod,
+      codes["MIDUGOD"],
+      contentRevealSound,
+      imageContainer
     );
   },
 };
