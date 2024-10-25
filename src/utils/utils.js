@@ -48,10 +48,11 @@ export function handleImageDisplay(imageElement, resultText, contentSound, conta
   contentSound.play();
 }
 
-export const handleWindowOpen = (codeKey, url) => {
+export const handleWindowOpen = (codeKey, url, vel = 1000) => {
+  console.log(vel)
   resetBlinkEffect(true);
   document.getElementById("result").innerText = codeKey;
-  setTimeout(() => window.open(url, "_blank"), 1000);
+  setTimeout(() => window.open(url, "_blank"), vel);
 };
 
 export function handleFileDownload(filePath, fileName, resultText) {

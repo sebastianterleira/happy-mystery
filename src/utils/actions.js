@@ -95,6 +95,11 @@ export const actions = {
       contentRevealSound,
       imageContainer
     );
+    handleWindowOpen(
+      codes["YOYO"],
+      "https://www.instagram.com/yoyolafrenchie/",
+      5000
+    );
   },
   MUERTE: () => {
     handleImageDisplay(
@@ -301,5 +306,11 @@ export const actions = {
   },
   CODES: () => {
     handleFileDownload("/download/CODES.txt", "CODES.txt", codes["CODES"]);
+  },
+  GITHUB: () => {
+    handleWindowOpen(
+      codes["GITHUB"],
+      "https://github.com/sebastianterleira/happy-mystery"
+    );
   },
 };

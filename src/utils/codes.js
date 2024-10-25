@@ -3,7 +3,7 @@ export const codes = {
   HAPPYBIRTHDAY: "Another year, another mystery solved. Or is it?",
   SECRET32: "The answer to life, the universe, and... your birthday!",
   DECODEX: "Descifrador de códigos, dales buen uso.",
-  YOYO: "Una criatura muy hermosa en muchas dimensiones multiversales, bill tiene una!.",
+  YOYO: "Una criatura muy rara y a la vez linda..., bill tiene una!",
   MYSTERY: "Wow lo lograste, es solo el comienzo",
   BILL: "Asi que quieres saber mas sobre mi...",
   BILLCIPHER: "Soy una idea perfectamente geometrica.",
@@ -63,6 +63,7 @@ export const codes = {
   DOTA: "Vi sitter i ventrilo och spelar DotA",
   WELLMEETAGAIN: "BILL: nooo!, como apago esto!!?",
   CODES: "Desbloqueaste todos los códigos!, recuerda que tambien puedes descubrirlos!",
+  GITHUB: "Encontraste mi repositorio...pueda que tambien seas todo un genio."
 
   // CURSED: "TODO: hacer zoom" =>  destructionisaformofcreation https://codepen.io/angrygabo/pen/KKVKedJ
   // Puedes agregar más códigos aquí.
